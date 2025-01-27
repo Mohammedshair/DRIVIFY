@@ -329,7 +329,7 @@ const vehicleData = [
       name: "BMW 3 Series",
       type: "Sedan",
       price: 5400000,
-      image: "images/BMW 3 Series.png",
+      image: "images/BMW 3 series.png",
       fuelType: "Petrol/Diesel",
       seatingCapacity: 5,
       description: "A sophisticated luxury sedan with sporty handling and premium features"
