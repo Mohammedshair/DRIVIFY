@@ -1017,7 +1017,7 @@ seatingCapacity: 2
           }
 
           // Seating Capacity Filter
-          if (seatingCapacity && vehicle.seatingCapacity !== parseInt(seatingCapacity)) {
+          if (seatingCapacity && vehicle.seatingCapacity !== seatingCapacity.toLowerCase parseInt(seatingCapacity)) {
             matchesSeats = false;
           }
 
