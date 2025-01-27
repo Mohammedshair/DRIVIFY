@@ -626,7 +626,7 @@ const vehicleData = [
     name: "Volvo EX90", 
     type: "SUV", 
     price: 10000000, 
-    image: "images/Volvo_ex90.png", 
+    image: "images/Volvo_EX90.png", 
     description: "5 star rated for safety and performance.",
     fuelType: "Electric",
     seatingCapacity: 6
