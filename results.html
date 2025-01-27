@@ -1056,6 +1056,39 @@ seatingCapacity: 2
 
       // Display results
       displayResults();
+      // Apply filters on form submission
+document.getElementById("filterForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // Get values from the form
+  const carType = document.getElementById("carType").value;
+  const seatingCapacity = document.getElementById("seatingCapacity").value;
+  const priceRange = document.getElementById("priceRange").value;
+  const fuelType = document.getElementById("fuelType").value;
+
+  // Update the URL with selected filters
+  const newParams = new URLSearchParams();
+  if (carType) newParams.set("carType", carType);
+  if (seatingCapacity) newParams.set("seatingCapacity", seatingCapacity);
+  if (priceRange) newParams.set("priceRange", priceRange);
+  if (fuelType) newParams.set("fuelType", fuelType);
+
+  // Redirect to the filtered URL
+  window.location.search = newParams.toString();
+});
+
+// Function to toggle the visibility of the filter section
+function toggleFilter() {
+  const filterSection = document.getElementById("filterSection");
+  if (
+    filterSection.style.display === "none" ||
+    filterSection.style.display === ""
+  ) {
+    filterSection.style.display = "block";
+  } else {
+    filterSection.style.display = "none";
+  }
+}
     </script>
   </body>
 </html>
