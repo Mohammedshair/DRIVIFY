@@ -851,7 +851,7 @@ const vehicleData = [
     name: "McLaren 720S", 
     type: "Sports", 
     price: 46500000, 
-    image: "images/McLaren_720S.png", 
+    image: "images/McLaren_720s.png",
     description: "A car with perfect Aerodynamics flying in the air.",
     fuelType: "petrol",
     seatingCapacity: 2
