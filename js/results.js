@@ -906,7 +906,7 @@ function filterVehicles() {
     }
 
     // Car Type Filter
-    if (carType && vehicle.type.toLowerCase() !== carType.toLowerCase()) {
+    if (carType && vehicle.cartype.toLowerCase() !== carType.toLowerCase()) {
       matchesType = false;
     }
 
