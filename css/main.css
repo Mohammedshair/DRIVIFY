@@ -1,4 +1,4 @@
-/*main page */
+/* General Reset */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -12,15 +12,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background-color: #7db3ef;;
+    padding: 10px 5%;
+    background-color: #7db3ef;
     color: black;
-    position: sticky; /* Makes the header sticky */
-    top: 0; /* Ensures the header stays at the top */
-    z-index: 1000; /* Keeps the header above other elements */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow for visibility */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
 }
-
 
 header .logo h1 {
     margin: 0;
@@ -29,13 +29,15 @@ header .logo h1 {
     color: #030303;
 }
 
+/* Navigation Menu */
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -52,47 +54,45 @@ nav ul li a:hover {
     color: #003044;
 }
 
+/* Logo */
 .logo {
     display: flex;
     align-items: center;
 }
 
 .logo img {
-    width: 50px;
+    width: 40px;
     height: auto;
     margin-right: 10px;
     border-radius: 50%;
-    border-color: #d01919;
-    border-style:dashed;
+    border: 2px dashed #d01919;
 }
 
-
-
+/* Get Started Section */
 .get-started {
     text-align: center;
     font-family: 'Bebas Neue', sans-serif;
     background-color: #003044;
-    padding: 20px;
-    max-width:none;
-    padding-bottom: 100px;
-}
-.get-started p,h2,h3 {
-    color: #f8f9fa;
-    font-size: 1.9rem;
+    padding: 30px 5%;
 }
 
+.get-started p,
+.get-started h2,
+.get-started h3 {
+    color: #f8f9fa;
+    font-size: 1.5rem;
+}
 
 /* Form Styles */
 .get-started form {
     max-width: 800px;
     margin: 20px auto;
-    margin-bottom: 0;
     padding: 20px;
     background-color: #B6D3E3;
     border-radius: 8px;
-    box-shadow: 0 20px px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
@@ -103,7 +103,7 @@ nav ul li a:hover {
 }
 
 label {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-bottom: 5px;
     font-weight: 300;
     color: #003044;
@@ -112,24 +112,22 @@ label {
 select,
 input[type="number"] {
     padding: 10px;
-    border: 3px solid #003044;
+    border: 2px solid #003044;
     border-radius: 4px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #003044;
     font-family: 'Bebas Neue', sans-serif;
-
 }
 
 /* Full-width for Submit Button */
 .form-submit {
-    grid-column: span 2; /* Make the button span across both columns */
+    grid-column: span 2;
     text-align: center;
 }
 
 button {
     padding: 10px 20px;
-    margin: 10px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     background-color: #003044;
     color: #B6D3E3;
     border: none;
@@ -142,16 +140,12 @@ button:hover {
     color: #ffffff;
 }
 
-
-
-/* Footer Section */
+/* Footer */
 footer {
     text-align: center;
-    padding-bottom: 20px;
-    padding-top: 10px;
+    padding: 15px 5%;
     background-color: #003044;
     color: #B6D3E3;
-    font-family: 'Bebas Neue', sans-serif;
 }
 
 footer ul {
@@ -160,10 +154,11 @@ footer ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 footer ul li {
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 footer ul li a {
@@ -174,4 +169,121 @@ footer ul li a {
 
 footer ul li a:hover {
     color: #3A6275;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .logo h1 {
+        font-size: 1.6rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .get-started h2,
+    .get-started h3 {
+        font-size: 1.4rem;
+    }
+
+    .get-started p {
+        font-size: 1.3rem;
+    }
+
+    .get-started form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-submit {
+        grid-column: span 1;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .get-started h2,
+    .get-started h3 {
+        font-size: 1.3rem;
+    }
+
+    .get-started p {
+        font-size: 1.1rem;
+    }
+
+    .get-started form {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    select,
+    input[type="number"] {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .form-submit {
+        grid-column: span 1;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo h1 {
+        font-size: 1.4rem;
+    }
+
+    .get-started h2,
+    .get-started h3 {
+        font-size: 1.2rem;
+    }
+
+    .get-started p {
+        font-size: 1rem;
+    }
+
+    .get-started form {
+        padding: 10px;
+    }
+
+    select,
+    input[type="number"] {
+        font-size: 0.9rem;
+        padding: 7px;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 7px 14px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
 }
